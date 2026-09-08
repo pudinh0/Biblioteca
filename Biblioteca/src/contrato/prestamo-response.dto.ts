@@ -27,3 +27,15 @@ export function aResponseDto(p: Prestamo): PrestamoResponseDto {
     creadoEn: p.creadoEn.toISOString()
   }
 }
+
+export interface ErrorResponseDTO {
+  error: String;
+  mensaje: string;
+  detalles?: string[];
+}
+
+export interface CrearPrestamoRequestDto {
+  libroId: string;
+  socioId: string;
+  ejemplares: number[];
+}
